@@ -13,13 +13,17 @@
 
   <meta name="theme-color" content="#08111f">
 
-  <!-- Favicon -->
+  <!-- =========================================================
+       FAVICON
+  ========================================================== -->
   <link
     rel="icon"
     href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2308111f'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='700' font-size='26' fill='%2322d3ee' text-anchor='middle'%3EAS%3C/text%3E%3C/svg%3E"
   >
 
-  <!-- Fonts -->
+  <!-- =========================================================
+       FONTS
+  ========================================================== -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -28,7 +32,9 @@
     rel="stylesheet"
   >
 
-  <!-- Font Awesome -->
+  <!-- =========================================================
+       FONT AWESOME
+  ========================================================== -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -71,7 +77,7 @@
 
     /* =========================================================
        RESET
-    ========================================================= */
+    ========================================================== */
 
     *,
     *::before,
@@ -79,7 +85,6 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      scroll-behavior: smooth;
     }
 
     html {
@@ -124,7 +129,7 @@
 
     /* =========================================================
        SCROLLBAR
-    ========================================================= */
+    ========================================================== */
 
     ::-webkit-scrollbar {
       width: 8px;
@@ -146,7 +151,7 @@
 
     /* =========================================================
        BACKGROUND
-    ========================================================= */
+    ========================================================== */
 
     .bg-fx {
       position: fixed;
@@ -237,7 +242,7 @@
 
     /* =========================================================
        GLASS
-    ========================================================= */
+    ========================================================== */
 
     .glass {
       background: var(--bg-card);
@@ -250,7 +255,7 @@
 
     /* =========================================================
        HEADER
-    ========================================================= */
+    ========================================================== */
 
     header {
       position: fixed;
@@ -362,11 +367,12 @@
 
     /* =========================================================
        COMMON SECTIONS
-    ========================================================= */
+    ========================================================== */
 
     section {
       padding: 82px 6% 30px;
       position: relative;
+      scroll-margin-top: 75px;
     }
 
     #home {
@@ -418,7 +424,7 @@
 
     /* =========================================================
        HERO
-    ========================================================= */
+    ========================================================== */
 
     .hero {
       max-width: var(--container);
@@ -681,7 +687,7 @@
 
     /* =========================================================
        HERO PHOTO
-    ========================================================= */
+    ========================================================== */
 
     .hero-image {
       flex: 0.75;
@@ -780,7 +786,7 @@
 
     /* =========================================================
        ABOUT
-    ========================================================= */
+    ========================================================== */
 
     .about-wrap {
       max-width: var(--container);
@@ -845,7 +851,7 @@
 
     /* =========================================================
        WHAT I DO
-    ========================================================= */
+    ========================================================== */
 
     .wid-grid {
       max-width: var(--container);
@@ -910,7 +916,7 @@
 
     /* =========================================================
        SKILLS
-    ========================================================= */
+    ========================================================== */
 
     .skills-grid {
       max-width: var(--container);
@@ -1013,7 +1019,7 @@
 
     /* =========================================================
        CURRENTLY LEARNING
-    ========================================================= */
+    ========================================================== */
 
     .learn-grid {
       max-width: var(--container);
@@ -1063,194 +1069,8 @@
 
 
     /* =========================================================
-       PROJECTS
-    ========================================================= */
-
-    .project-grid {
-      max-width: var(--container);
-
-      margin: 0 auto;
-
-      display: grid;
-
-      /*
-        IMPORTANT:
-        Three project cards remain in exactly one row
-        on desktop.
-      */
-      grid-template-columns:
-        repeat(3, minmax(0, 1fr));
-
-      gap: 22px;
-    }
-
-    .project-card {
-      overflow: hidden;
-
-      border-radius: 22px;
-
-      display: flex;
-      flex-direction: column;
-
-      transition:
-        transform 0.35s ease,
-        border-color 0.35s ease,
-        box-shadow 0.35s ease;
-    }
-
-    .project-card:hover {
-      transform: translateY(-9px);
-
-      border-color:
-        rgba(34,211,238,0.35);
-
-      box-shadow:
-        0 28px 65px rgba(0,0,0,0.45),
-        0 0 35px rgba(34,211,238,0.07);
-    }
-
-    .project-top {
-      height: 5px;
-
-      flex-shrink: 0;
-
-      background:
-        linear-gradient(
-          90deg,
-          var(--blue),
-          var(--cyan),
-          var(--violet)
-        );
-    }
-
-    .project-body {
-      padding: 25px;
-
-      display: flex;
-      flex-direction: column;
-
-      height: 100%;
-    }
-
-    .project-body h3 {
-      font-size: 1.15rem;
-
-      margin-bottom: 4px;
-
-      letter-spacing: -0.02em;
-    }
-
-    .project-role {
-      min-height: 39px;
-
-      color: var(--muted);
-
-      font-size: 0.76rem;
-
-      margin-bottom: 15px;
-    }
-
-    .badges {
-      display: flex;
-      flex-wrap: wrap;
-
-      gap: 6px;
-
-      margin-bottom: 18px;
-    }
-
-    .badges span {
-      padding: 5px 9px;
-
-      border-radius: 50px;
-
-      color: #bceef0;
-
-      background:
-        rgba(34,211,238,0.07);
-
-      border:
-        1px solid rgba(34,211,238,0.18);
-
-      font-size: 0.66rem;
-      font-weight: 600;
-    }
-
-    .highlights {
-      flex: 1;
-
-      margin-bottom: 20px;
-    }
-
-    .highlights li {
-      display: flex;
-      gap: 8px;
-
-      color: var(--muted);
-
-      font-size: 0.78rem;
-      line-height: 1.55;
-
-      margin-bottom: 8px;
-    }
-
-    .highlights li i {
-      flex-shrink: 0;
-
-      color: var(--emerald);
-
-      font-size: 0.7rem;
-
-      margin-top: 4px;
-    }
-
-    .project-links {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-
-      gap: 9px;
-    }
-
-    .project-links a {
-      padding: 9px 10px;
-
-      text-align: center;
-
-      border-radius: 50px;
-
-      font-size: 0.74rem;
-      font-weight: 700;
-
-      transition: 0.25s ease;
-    }
-
-    .project-links .primary-link {
-      color: #03131b;
-
-      background:
-        linear-gradient(
-          135deg,
-          var(--blue),
-          var(--cyan)
-        );
-    }
-
-    .project-links .secondary-link {
-      color: var(--text-soft);
-
-      border:
-        1px solid rgba(255,255,255,0.14);
-    }
-
-    .project-links a:hover {
-      transform: translateY(-2px);
-      opacity: 0.9;
-    }
-
-
-    /* =========================================================
        INTERNSHIP
-    ========================================================= */
+    ========================================================== */
 
     .internship-wrap {
       max-width: var(--container);
@@ -1370,13 +1190,13 @@
 
     .internship-projects {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
 
       gap: 13px;
     }
 
     .intern-project {
-      padding: 16px;
+      padding: 17px;
 
       border-radius: 16px;
 
@@ -1422,8 +1242,262 @@
 
 
     /* =========================================================
+       PROJECTS
+    ========================================================== */
+
+    .project-grid {
+      max-width: var(--container);
+
+      margin: 0 auto;
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+      gap: 22px;
+
+      align-items: stretch;
+    }
+
+    .project-card {
+      display: flex;
+      flex-direction: column;
+
+      height: 100%;
+
+      overflow: hidden;
+
+      border-radius: 22px;
+
+      transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-7px);
+
+      border-color:
+        rgba(34,211,238,0.28);
+
+      box-shadow:
+        0 24px 60px rgba(0,0,0,0.38);
+    }
+
+    .project-top {
+      height: 4px;
+      flex-shrink: 0;
+
+      background:
+        linear-gradient(
+          90deg,
+          var(--blue),
+          var(--cyan),
+          var(--violet)
+        );
+    }
+
+    .project-body {
+      display: flex;
+      flex-direction: column;
+
+      flex: 1;
+
+      padding: 25px;
+    }
+
+    .project-heading {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+
+      gap: 12px;
+
+      margin-bottom: 6px;
+    }
+
+    .project-heading h3 {
+      font-size: 1.15rem;
+      line-height: 1.3;
+
+      margin: 0;
+    }
+
+    .project-label {
+      flex-shrink: 0;
+
+      padding: 5px 9px;
+
+      border-radius: 50px;
+
+      font-size: 0.62rem;
+      font-weight: 700;
+
+      color: var(--cyan);
+
+      background:
+        rgba(34,211,238,0.07);
+
+      border:
+        1px solid rgba(34,211,238,0.14);
+    }
+
+    .project-role {
+      color: var(--cyan);
+
+      font-size: 0.76rem;
+      font-weight: 600;
+
+      line-height: 1.5;
+
+      margin-bottom: 13px;
+    }
+
+    .project-description {
+      color: var(--muted);
+
+      font-size: 0.78rem;
+      line-height: 1.7;
+
+      margin-bottom: 17px;
+    }
+
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 6px;
+
+      margin-bottom: 18px;
+    }
+
+    .badges span {
+      padding: 5px 8px;
+
+      border-radius: 6px;
+
+      color: #cbd5e1;
+
+      background:
+        rgba(255,255,255,0.035);
+
+      border:
+        1px solid rgba(255,255,255,0.07);
+
+      font-size: 0.62rem;
+      font-weight: 600;
+    }
+
+    .highlights {
+      display: flex;
+      flex-direction: column;
+
+      gap: 9px;
+
+      margin: 0;
+      padding: 0;
+
+      flex: 1;
+
+      list-style: none;
+    }
+
+    .highlights li {
+      display: flex;
+      align-items: flex-start;
+
+      gap: 9px;
+
+      color: #b9c5d8;
+
+      font-size: 0.74rem;
+      line-height: 1.55;
+    }
+
+    .highlights li i {
+      flex-shrink: 0;
+
+      margin-top: 4px;
+
+      color: var(--cyan);
+
+      font-size: 0.6rem;
+    }
+
+    .project-links {
+      display: flex;
+      gap: 9px;
+
+      margin-top: auto;
+      padding-top: 22px;
+    }
+
+    .project-links a {
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      gap: 7px;
+
+      padding: 9px 13px;
+
+      border-radius: 9px;
+
+      font-size: 0.7rem;
+      font-weight: 700;
+
+      text-decoration: none;
+
+      transition: 0.25s ease;
+    }
+
+    .primary-link {
+      color: #fff;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(34,211,238,0.16),
+          rgba(99,102,241,0.14)
+        );
+
+      border:
+        1px solid rgba(34,211,238,0.18);
+    }
+
+    .primary-link:hover {
+      background:
+        rgba(34,211,238,0.16);
+
+      transform: translateY(-2px);
+    }
+
+    .secondary-link {
+      color: #b9c5d8;
+
+      background:
+        rgba(255,255,255,0.035);
+
+      border:
+        1px solid rgba(255,255,255,0.08);
+    }
+
+    .secondary-link:hover {
+      color: white;
+
+      border-color:
+        rgba(255,255,255,0.18);
+
+      transform: translateY(-2px);
+    }
+
+
+    /* =========================================================
        CERTIFICATES
-    ========================================================= */
+    ========================================================== */
 
     .cert-grid {
       max-width: var(--container);
@@ -1518,7 +1592,7 @@
 
     /* =========================================================
        ACHIEVEMENTS
-    ========================================================= */
+    ========================================================== */
 
     .ach-grid {
       max-width: var(--container);
@@ -1617,7 +1691,7 @@
 
     /* =========================================================
        CONTACT
-    ========================================================= */
+    ========================================================== */
 
     .contact-card {
       max-width: 650px;
@@ -1681,7 +1755,7 @@
 
     /* =========================================================
        FOOTER
-    ========================================================= */
+    ========================================================== */
 
     footer {
       padding: 38px 6% 25px;
@@ -1728,7 +1802,7 @@
 
     /* =========================================================
        REVEAL ANIMATION
-    ========================================================= */
+    ========================================================== */
 
     .reveal {
       opacity: 0;
@@ -1749,7 +1823,7 @@
 
     /* =========================================================
        FOCUS
-    ========================================================= */
+    ========================================================== */
 
     a:focus-visible,
     button:focus-visible {
@@ -1762,7 +1836,7 @@
 
     /* =========================================================
        RESPONSIVE
-    ========================================================= */
+    ========================================================== */
 
     @media (max-width: 1100px) {
 
@@ -1845,7 +1919,7 @@
 
       .internship-projects {
         grid-template-columns:
-          1fr;
+          1fr 1fr;
       }
 
       .tools-grid {
@@ -1918,6 +1992,34 @@
     }
 
 
+    @media (max-width: 700px) {
+
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project-body {
+        padding: 21px;
+      }
+
+      .project-heading {
+        flex-direction: column;
+      }
+
+      .project-label {
+        align-self: flex-start;
+      }
+
+      .project-links {
+        flex-wrap: wrap;
+      }
+
+      .internship-projects {
+        grid-template-columns: 1fr;
+      }
+    }
+
+
     @media (max-width: 620px) {
 
       header {
@@ -1942,10 +2044,6 @@
 
       .hero-buttons .btn {
         width: 100%;
-      }
-
-      .project-grid {
-        grid-template-columns: 1fr;
       }
 
       .project-role {
@@ -1991,14 +2089,18 @@
       }
 
       .project-links {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+      }
+
+      .project-links a {
+        width: 100%;
       }
     }
 
 
     /* =========================================================
        REDUCED MOTION
-    ========================================================= */
+    ========================================================== */
 
     @media (prefers-reduced-motion: reduce) {
 
@@ -2022,7 +2124,10 @@
 
 <body>
 
-  <!-- Background -->
+  <!-- =======================================================
+       BACKGROUND
+  ======================================================== -->
+
   <div class="bg-fx"></div>
   <div class="bg-grid"></div>
 
@@ -2046,6 +2151,7 @@
       id="navToggle"
       aria-label="Open navigation menu"
       aria-expanded="false"
+      type="button"
     >
       <i class="fas fa-bars"></i>
     </button>
@@ -2061,14 +2167,13 @@
       <a href="#achievements">Achievements</a>
       <a href="#contact">Contact</a>
 
-      <!-- UPDATED RESUME -->
       <a
         class="nav-resume"
-        href="https://drive.google.com/file/d/1-ngACaZ9_rocGUPZ9dKTD1VoO56qFEgA/view?usp=drivesdk"
-        target="_blank"
-        rel="noopener"
+        href="resume/Shalini_Resume.pdf"
+        download="Shalini_Resume.pdf"
       >
-        Resume <i class="fas fa-arrow-up-right-from-square"></i>
+        Resume
+        <i class="fas fa-download"></i>
       </a>
 
     </nav>
@@ -2102,7 +2207,6 @@
             <span>Aligeti Shalini</span>
           </h1>
 
-          <!-- ROLE-NEUTRAL -->
           <div class="hero-role">
             <span id="typedRole"></span>
             <span class="type-cursor">|</span>
@@ -2126,13 +2230,12 @@
             </a>
 
             <a
-              href="https://drive.google.com/file/d/1-ngACaZ9_rocGUPZ9dKTD1VoO56qFEgA/view?usp=drivesdk"
-              target="_blank"
-              rel="noopener"
+              href="resume/Shalini_Resume.pdf"
+              download="Shalini_Resume.pdf"
               class="btn btn-ghost"
             >
               <i class="fas fa-file-arrow-down"></i>
-              View Resume
+              Download Resume
             </a>
 
           </div>
@@ -2142,7 +2245,7 @@
             <a
               href="https://github.com/shalini67258"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               aria-label="GitHub"
             >
               <i class="fab fa-github"></i>
@@ -2151,7 +2254,7 @@
             <a
               href="https://www.linkedin.com/in/shalini-aligeti-2151292b4/"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               aria-label="LinkedIn"
             >
               <i class="fab fa-linkedin"></i>
@@ -2160,7 +2263,7 @@
             <a
               href="https://leetcode.com/u/Shalini_Aligeti/"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               aria-label="LeetCode"
             >
               <i class="fas fa-code"></i>
@@ -2213,6 +2316,7 @@
       <p class="section-sub reveal">
         A quick look at my background, interests, and approach to building software.
       </p>
+
 
       <div class="about-wrap">
 
@@ -2296,6 +2400,7 @@
         Areas where I build, integrate, and improve software solutions.
       </p>
 
+
       <div class="wid-grid">
 
         <div class="glass wid-card reveal">
@@ -2349,7 +2454,6 @@
 
 
       <div class="skills-grid">
-
 
         <!-- LANGUAGES -->
 
@@ -2696,410 +2800,443 @@
     </section>
 
 
-   <!-- =========================================================
-     INTERNSHIP EXPERIENCE
-========================================================= -->
+    <!-- =====================================================
+         INTERNSHIP EXPERIENCE
+    ====================================================== -->
 
-<section id="internship" class="section">
-  <div class="section-heading">
-    <span class="section-kicker">Experience</span>
-    <h2>Internship Experience</h2>
-    <p>
-      Practical software development experience through real-world product work.
-    </p>
-  </div>
+    <section id="internships">
 
-  <div class="internship-wrap">
+      <h2 class="section-title reveal">
+        Internship Experience
+      </h2>
 
-    <div class="internship-card glass">
-
-      <div class="internship-header">
-
-        <div class="internship-title">
-          <h3>Full Stack Development Intern</h3>
-
-          <a
-            href="https://lunetron.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="company-link"
-          >
-            Lunetron Web Services
-            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-          </a>
-        </div>
-
-        <span class="internship-date">
-          29 July 2026 – 29 September 2026
-        </span>
-
-      </div>
-
-      <div class="internship-role">
-        Software Development · Product Engineering · AI Integration
-      </div>
-
-      <p class="internship-description">
-        Gained practical experience in full-stack development by contributing
-        to real-world product features, frontend interfaces, REST API
-        integration, database workflows, analytics, and AI-powered
-        functionality.
+      <p class="section-sub reveal">
+        Practical software development experience through real-world product work.
       </p>
 
-      <div class="internship-projects">
+      <div class="internship-wrap">
 
-        <!-- VayuFlow -->
+        <div class="internship-card glass reveal">
 
-        <div class="intern-project">
+          <div class="internship-header">
 
-          <h4>
-            <i class="fa-solid fa-layer-group"></i>
-            VayuFlow
-          </h4>
+            <div class="internship-title">
 
-          <p>
-            Contributed to a bulk messaging and digital advertising platform
-            covering WhatsApp, Email, SMS, Google Ads and Meta Ads. Worked on
-            React.js interfaces, REST API integration, messaging and
-            verification workflows, campaigns, analytics, and AI-assisted
-            marketing features.
+              <h3>
+                Full Stack Development Intern
+              </h3>
+
+              <a
+                href="https://lunetron.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="company-link"
+              >
+                Lunetron Web Services
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+
+            </div>
+
+            <span class="internship-date">
+              29 July 2026 – 29 September 2026
+            </span>
+
+          </div>
+
+          <div class="internship-role">
+            Software Development · Product Engineering · AI Integration
+          </div>
+
+          <p class="internship-description">
+            Gained practical experience in full-stack development by contributing
+            to real-world product features, frontend interfaces, REST API
+            integration, database workflows, analytics, and AI-powered
+            functionality.
           </p>
 
-        </div>
+          <div class="internship-projects">
+
+            <!-- VAYUFLOW -->
+
+            <div class="intern-project">
+
+              <h4>
+                <i class="fa-solid fa-layer-group"></i>
+                VayuFlow
+              </h4>
+
+              <p>
+                Contributed to a bulk messaging and digital advertising platform
+                covering WhatsApp, Email, SMS, Google Ads and Meta Ads. Worked on
+                React.js interfaces, REST API integration, messaging and
+                verification workflows, campaigns, analytics, and AI-assisted
+                marketing features.
+              </p>
+
+            </div>
 
 
-        <!-- FurniMart -->
+            <!-- FURNIMART -->
 
-        <div class="intern-project">
+            <div class="intern-project">
 
-          <h4>
-            <i class="fa-solid fa-couch"></i>
-            FurniMart
-          </h4>
+              <h4>
+                <i class="fa-solid fa-couch"></i>
+                FurniMart
+              </h4>
 
-          <p>
-            Contributed to a B2B furniture marketplace connecting manufacturers,
-            factories, showrooms and bulk buyers. Worked on seller onboarding,
-            product listings, buyer inquiries, quotations, manufacturer
-            profiles, reviews, favorites, admin workflows, analytics, and
-            AI-assisted product discovery.
-          </p>
+              <p>
+                Contributed to a B2B furniture marketplace connecting
+                manufacturers, factories, showrooms and bulk buyers. Worked on
+                seller onboarding, product listings, buyer inquiries,
+                quotations, manufacturer profiles, reviews, favorites, admin
+                workflows, analytics, and AI-assisted product discovery.
+              </p>
+
+            </div>
+
+          </div>
 
         </div>
 
       </div>
 
-    </div>
+    </section>
 
-  </div>
-</section>
-  /* =========================================================
-   PROJECTS
-========================================================= */
 
-.project-grid {
-  display: grid;
+    <!-- =====================================================
+         PROJECTS
+    ====================================================== -->
 
-  grid-template-columns: repeat(3, 1fr);
+    <section id="projects">
 
-  gap: 22px;
+      <h2 class="section-title reveal">
+        Projects
+      </h2>
 
-  align-items: stretch;
-}
+      <p class="section-sub reveal">
+        Full-stack systems and AI-powered applications I've designed, built, and deployed.
+      </p>
 
-.project-card {
-  display: flex;
 
-  flex-direction: column;
+      <div class="project-grid">
 
-  height: 100%;
 
-  overflow: hidden;
+        <!-- =================================================
+             PROJECT 1 — LOCALLENS
+        ================================================== -->
 
-  transition:
-    transform 0.35s ease,
-    border-color 0.35s ease,
-    box-shadow 0.35s ease;
-}
+        <article class="glass project-card reveal">
 
-.project-card:hover {
-  transform: translateY(-7px);
+          <div class="project-top"></div>
 
-  border-color:
-    rgba(34, 211, 238, 0.25);
+          <div class="project-body">
 
-  box-shadow:
-    0 20px 50px rgba(0, 0, 0, 0.28);
-}
+            <div class="project-heading">
 
-.project-top {
-  height: 4px;
+              <h3>
+                LocalLens
+              </h3>
 
-  background:
-    linear-gradient(
-      90deg,
-      var(--blue),
-      var(--cyan),
-      var(--violet)
-    );
-}
+              <span class="project-label">
+                AI + Full Stack
+              </span>
 
-.project-body {
-  display: flex;
+            </div>
 
-  flex-direction: column;
+            <p class="project-role">
+              AI-Powered Hyperlocal Community Alert Platform
+            </p>
 
-  flex: 1;
+            <p class="project-description">
+              A community-focused platform for reporting local incidents,
+              verifying information through crowd signals, and using AI to
+              analyze credibility, severity, and discussion around reported
+              events.
+            </p>
 
-  padding: 25px;
-}
+            <div class="badges">
+              <span>Java</span>
+              <span>Spring Boot</span>
+              <span>React.js</span>
+              <span>PostgreSQL</span>
+              <span>Groq AI</span>
+            </div>
 
-.project-heading {
-  display: flex;
+            <ul class="highlights">
 
-  align-items: flex-start;
+              <li>
+                <i class="fas fa-check"></i>
+                AI credibility and severity analysis using LLaMA 3.3 70B
+              </li>
 
-  justify-content: space-between;
+              <li>
+                <i class="fas fa-check"></i>
+                Community confirm/deny verification with duplicate incident merging
+              </li>
 
-  gap: 12px;
+              <li>
+                <i class="fas fa-check"></i>
+                AI comment stance analysis and community Trust Score
+              </li>
 
-  margin-bottom: 6px;
-}
+              <li>
+                <i class="fas fa-check"></i>
+                Voice posting, translation, and support for 22 Indian languages
+              </li>
 
-.project-heading h3 {
-  font-size: 1.15rem;
+              <li>
+                <i class="fas fa-check"></i>
+                Analytics, trends, PDF export, and Emergency Mode
+              </li>
 
-  line-height: 1.3;
+              <li>
+                <i class="fas fa-check"></i>
+                Live deployment with React, Spring Boot, and PostgreSQL on Render
+              </li>
 
-  margin: 0;
-}
+            </ul>
 
-.project-label {
-  flex-shrink: 0;
+            <div class="project-links">
 
-  padding: 5px 9px;
+              <a
+                class="primary-link"
+                href="https://github.com/shalini67258/locallens"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fab fa-github"></i>
+                GitHub
+              </a>
+
+              <a
+                class="secondary-link"
+                href="https://locallens-nccs.onrender.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fas fa-arrow-up-right-from-square"></i>
+                Live Demo
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- =================================================
+             PROJECT 2 — AI ACADEMIC SUPPORT
+        ================================================== -->
+
+        <article class="glass project-card reveal">
+
+          <div class="project-top"></div>
+
+          <div class="project-body">
+
+            <div class="project-heading">
 
-  border-radius: 50px;
+              <h3>
+                AI Academic Support Platform
+              </h3>
 
-  font-size: 0.62rem;
+              <span class="project-label">
+                AI + ML
+              </span>
 
-  font-weight: 700;
+            </div>
 
-  color: var(--cyan);
+            <p class="project-role">
+              Full-Stack Doubt Management & Question Analytics System
+            </p>
 
-  background:
-    rgba(34, 211, 238, 0.07);
+            <p class="project-description">
+              A student and faculty platform combining local AI assistance
+              with machine-learning-based question analysis to answer doubts,
+              detect repeated questions, and provide useful academic insights.
+            </p>
 
-  border:
-    1px solid rgba(34, 211, 238, 0.14);
-}
+            <div class="badges">
+              <span>Java</span>
+              <span>Spring Boot</span>
+              <span>Python</span>
+              <span>Ollama</span>
+              <span>TF-IDF</span>
+              <span>Cosine Similarity</span>
+            </div>
 
-.project-role {
-  color: var(--cyan);
+            <ul class="highlights">
 
-  font-size: 0.76rem;
+              <li>
+                <i class="fas fa-check"></i>
+                Local LLM-based academic doubt resolution using Ollama
+              </li>
 
-  font-weight: 600;
+              <li>
+                <i class="fas fa-check"></i>
+                Python/scikit-learn ML service using TF-IDF and Cosine Similarity
+              </li>
 
-  line-height: 1.5;
+              <li>
+                <i class="fas fa-check"></i>
+                Near-duplicate questions detected and frequency tracked
+              </li>
 
-  margin-bottom: 13px;
-}
+              <li>
+                <i class="fas fa-check"></i>
+                Faculty resource management and academic analytics
+              </li>
 
-.project-description {
-  color: var(--muted);
+              <li>
+                <i class="fas fa-check"></i>
+                Learning Space and Insight Hub for student and faculty workflows
+              </li>
 
-  font-size: 0.78rem;
-
-  line-height: 1.7;
-
-  margin-bottom: 17px;
-}
-
-
-/* TECH BADGES */
-
-.badges {
-  display: flex;
-
-  flex-wrap: wrap;
-
-  gap: 6px;
-
-  margin-bottom: 18px;
-}
-
-.badges span {
-  padding: 5px 8px;
-
-  border-radius: 6px;
-
-  color: #cbd5e1;
-
-  background:
-    rgba(255, 255, 255, 0.035);
-
-  border:
-    1px solid rgba(255, 255, 255, 0.07);
-
-  font-size: 0.62rem;
-
-  font-weight: 600;
-}
-
-
-/* PROJECT HIGHLIGHTS */
-
-.highlights {
-  display: flex;
-
-  flex-direction: column;
-
-  gap: 9px;
-
-  margin: 0;
-
-  padding: 0;
-
-  list-style: none;
-}
-
-.highlights li {
-  display: flex;
-
-  align-items: flex-start;
-
-  gap: 9px;
-
-  color: #b9c5d8;
-
-  font-size: 0.74rem;
-
-  line-height: 1.55;
-}
-
-.highlights li i {
-  flex-shrink: 0;
-
-  margin-top: 4px;
-
-  color: var(--cyan);
-
-  font-size: 0.6rem;
-}
-
-
-/* PROJECT LINKS */
-
-.project-links {
-  display: flex;
-
-  gap: 9px;
-
-  margin-top: auto;
-
-  padding-top: 22px;
-}
-
-.project-links a {
-  display: inline-flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  gap: 7px;
-
-  padding: 9px 13px;
-
-  border-radius: 9px;
-
-  font-size: 0.7rem;
-
-  font-weight: 700;
-
-  text-decoration: none;
-
-  transition: 0.25s ease;
-}
-
-.primary-link {
-  color: #fff;
-
-  background:
-    linear-gradient(
-      135deg,
-      rgba(34, 211, 238, 0.16),
-      rgba(99, 102, 241, 0.14)
-    );
-
-  border:
-    1px solid rgba(34, 211, 238, 0.18);
-}
-
-.primary-link:hover {
-  background:
-    rgba(34, 211, 238, 0.16);
-
-  transform: translateY(-2px);
-}
-
-.secondary-link {
-  color: #b9c5d8;
-
-  background:
-    rgba(255, 255, 255, 0.035);
-
-  border:
-    1px solid rgba(255, 255, 255, 0.08);
-}
-
-.secondary-link:hover {
-  color: white;
-
-  border-color:
-    rgba(255, 255, 255, 0.18);
-
-  transform: translateY(-2px);
-}
-
-
-/* =========================================================
-   RESPONSIVE PROJECTS
-========================================================= */
-
-@media (max-width: 1050px) {
-
-  .project-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-}
-
-
-@media (max-width: 700px) {
-
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .project-body {
-    padding: 21px;
-  }
-
-  .project-heading {
-    flex-direction: column;
-  }
-
-  .project-label {
-    align-self: flex-start;
-  }
-
-  .project-links {
-    flex-wrap: wrap;
-  }
-
-}
+              <li>
+                <i class="fas fa-check"></i>
+                Spring Boot REST APIs integrated with Python ML and local AI
+              </li>
+
+            </ul>
+
+            <div class="project-links">
+
+              <a
+                class="primary-link"
+                href="https://github.com/shalini67258/AI-Powered-Academic-Support-Platform-With-ML-based-Question-Analytics"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fab fa-github"></i>
+                GitHub
+              </a>
+
+              <a
+                class="secondary-link"
+                href="https://drive.google.com/file/d/1-HwXQZjGg9b-SindTz5egwt8xT126uQJ/view?usp=drivesdk"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fas fa-play"></i>
+                Demo Video
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- =================================================
+             PROJECT 3 — SMART TIMETABLE
+        ================================================== -->
+
+        <article class="glass project-card reveal">
+
+          <div class="project-top"></div>
+
+          <div class="project-body">
+
+            <div class="project-heading">
+
+              <h3>
+                Smart Timetable Scheduler
+              </h3>
+
+              <span class="project-label">
+                Full Stack
+              </span>
+
+            </div>
+
+            <p class="project-role">
+              Institutional Academic Scheduling System
+            </p>
+
+            <p class="project-description">
+              A full-stack scheduling system designed for academic institutions
+              to manage branches, faculty, subjects, classrooms, users, and
+              automatically generate conflict-free timetables.
+            </p>
+
+            <div class="badges">
+              <span>Java 17</span>
+              <span>Spring Boot</span>
+              <span>Spring Data JPA</span>
+              <span>Hibernate</span>
+              <span>Thymeleaf</span>
+              <span>PostgreSQL</span>
+            </div>
+
+            <ul class="highlights">
+
+              <li>
+                <i class="fas fa-check"></i>
+                Constraint-based conflict-free timetable generation
+              </li>
+
+              <li>
+                <i class="fas fa-check"></i>
+                Role-based Admin, Faculty, and Student access
+              </li>
+
+              <li>
+                <i class="fas fa-check"></i>
+                Branch, year, and section-level data isolation
+              </li>
+
+              <li>
+                <i class="fas fa-check"></i>
+                Faculty-specific schedules from centralized timetable data
+              </li>
+
+              <li>
+                <i class="fas fa-check"></i>
+                Teacher availability and classroom capacity constraints
+              </li>
+
+              <li>
+                <i class="fas fa-check"></i>
+                Spring MVC, JPA/Hibernate, Thymeleaf, and PostgreSQL architecture
+              </li>
+
+            </ul>
+
+            <div class="project-links">
+
+              <a
+                class="primary-link"
+                href="https://github.com/shalini67258/Smart-Timetable-Scheduler"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fab fa-github"></i>
+                GitHub
+              </a>
+
+              <a
+                class="secondary-link"
+                href="https://smart-timetable-scheduler-aqqs.onrender.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fas fa-arrow-up-right-from-square"></i>
+                Live Demo
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
 
 
     <!-- =====================================================
@@ -3138,7 +3275,7 @@
               class="certificate-btn"
               href="https://drive.google.com/file/d/10EDx0XZUGLIj7GEWF57bBgH_PcYNs7QF/view?usp=drivesdk"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
             >
               <i class="fas fa-certificate"></i>
               View Certificate
@@ -3169,7 +3306,7 @@
               class="certificate-btn"
               href="https://drive.google.com/file/d/102ZWbgog0NduOaDaQRx-DluxxlPnDvmD/view?usp=drivesdk"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
             >
               <i class="fas fa-certificate"></i>
               View Certificate
@@ -3180,7 +3317,6 @@
           <i class="fas fa-award cert-icon"></i>
 
         </article>
-
 
       </div>
 
@@ -3203,7 +3339,6 @@
 
 
       <div class="ach-grid">
-
 
         <article class="glass ach-card reveal">
 
@@ -3246,7 +3381,6 @@
           </div>
 
         </article>
-
 
       </div>
 
@@ -3310,7 +3444,7 @@
           <a
             href="https://github.com/shalini67258"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
             aria-label="GitHub"
           >
             <i class="fab fa-github"></i>
@@ -3319,7 +3453,7 @@
           <a
             href="https://www.linkedin.com/in/shalini-aligeti-2151292b4/"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
             aria-label="LinkedIn"
           >
             <i class="fab fa-linkedin"></i>
@@ -3328,7 +3462,7 @@
           <a
             href="https://leetcode.com/u/Shalini_Aligeti/"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
             aria-label="LeetCode"
           >
             <i class="fas fa-code"></i>
@@ -3370,7 +3504,7 @@
       <a
         href="https://github.com/shalini67258"
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
         aria-label="GitHub"
       >
         <i class="fab fa-github"></i>
@@ -3379,7 +3513,7 @@
       <a
         href="https://www.linkedin.com/in/shalini-aligeti-2151292b4/"
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
         aria-label="LinkedIn"
       >
         <i class="fab fa-linkedin"></i>
@@ -3419,40 +3553,28 @@
       "Building With Code, Data & Intelligent Systems"
     ];
 
-    const typedEl =
-      document.getElementById("typedRole");
+    const typedEl = document.getElementById("typedRole");
 
     let roleIndex = 0;
     let charIndex = 0;
     let deleting = false;
 
-
     function typeLoop() {
 
-      const currentRole =
-        roles[roleIndex];
+      const currentRole = roles[roleIndex];
 
       if (!deleting) {
 
         charIndex++;
 
         typedEl.textContent =
-          currentRole.slice(
-            0,
-            charIndex
-          );
+          currentRole.slice(0, charIndex);
 
-        if (
-          charIndex ===
-          currentRole.length
-        ) {
+        if (charIndex === currentRole.length) {
 
           deleting = true;
 
-          setTimeout(
-            typeLoop,
-            1500
-          );
+          setTimeout(typeLoop, 1500);
 
           return;
         }
@@ -3462,21 +3584,15 @@
         charIndex--;
 
         typedEl.textContent =
-          currentRole.slice(
-            0,
-            charIndex
-          );
+          currentRole.slice(0, charIndex);
 
         if (charIndex === 0) {
 
           deleting = false;
 
           roleIndex =
-            (roleIndex + 1) %
-            roles.length;
-
+            (roleIndex + 1) % roles.length;
         }
-
       }
 
       setTimeout(
@@ -3493,14 +3609,10 @@
     ======================================================== */
 
     const navToggle =
-      document.getElementById(
-        "navToggle"
-      );
+      document.getElementById("navToggle");
 
     const navLinks =
-      document.getElementById(
-        "navLinks"
-      );
+      document.getElementById("navLinks");
 
 
     navToggle.addEventListener(
@@ -3508,13 +3620,11 @@
       () => {
 
         const isOpen =
-          navLinks.classList.toggle(
-            "open"
-          );
+          navLinks.classList.toggle("open");
 
         navToggle.setAttribute(
           "aria-expanded",
-          isOpen
+          String(isOpen)
         );
 
         navToggle.innerHTML =
@@ -3527,30 +3637,25 @@
 
     navLinks
       .querySelectorAll("a")
-      .forEach(
-        link => {
+      .forEach(link => {
 
-          link.addEventListener(
-            "click",
-            () => {
+        link.addEventListener(
+          "click",
+          () => {
 
-              navLinks.classList.remove(
-                "open"
-              );
+            navLinks.classList.remove("open");
 
-              navToggle.setAttribute(
-                "aria-expanded",
-                "false"
-              );
+            navToggle.setAttribute(
+              "aria-expanded",
+              "false"
+            );
 
-              navToggle.innerHTML =
-                '<i class="fas fa-bars"></i>';
+            navToggle.innerHTML =
+              '<i class="fas fa-bars"></i>';
+          }
+        );
 
-            }
-          );
-
-        }
-      );
+      });
 
 
     /* =======================================================
@@ -3558,9 +3663,7 @@
     ======================================================== */
 
     const sections =
-      document.querySelectorAll(
-        "section[id]"
-      );
+      document.querySelectorAll("section[id]");
 
     const navItems =
       document.querySelectorAll(
@@ -3572,49 +3675,38 @@
 
       let current = "";
 
-      sections.forEach(
-        section => {
+      sections.forEach(section => {
 
-          const sectionTop =
-            section.offsetTop - 170;
+        const sectionTop =
+          section.offsetTop - 170;
 
-          if (
-            window.scrollY >=
-            sectionTop
-          ) {
+        if (window.scrollY >= sectionTop) {
 
-            current =
-              section.getAttribute(
-                "id"
-              );
-
-          }
-
+          current =
+            section.getAttribute("id");
         }
-      );
+
+      });
 
 
-      navItems.forEach(
-        item => {
+      navItems.forEach(item => {
 
-          item.classList.toggle(
-            "active",
-            item.getAttribute(
-              "href"
-            ) === `#${current}`
-          );
+        item.classList.toggle(
+          "active",
+          item.getAttribute("href") ===
+          `#${current}`
+        );
 
-        }
-      );
+      });
 
     }
 
 
     window.addEventListener(
       "scroll",
-      updateActiveNav
+      updateActiveNav,
+      { passive: true }
     );
-
 
     updateActiveNav();
 
@@ -3624,34 +3716,25 @@
     ======================================================== */
 
     const revealElements =
-      document.querySelectorAll(
-        ".reveal"
-      );
+      document.querySelectorAll(".reveal");
 
 
     const revealObserver =
       new IntersectionObserver(
         entries => {
 
-          entries.forEach(
-            entry => {
+          entries.forEach(entry => {
 
-              if (
-                entry.isIntersecting
-              ) {
+            if (entry.isIntersecting) {
 
-                entry.target.classList.add(
-                  "in"
-                );
+              entry.target.classList.add("in");
 
-                revealObserver.unobserve(
-                  entry.target
-                );
-
-              }
-
+              revealObserver.unobserve(
+                entry.target
+              );
             }
-          );
+
+          });
 
         },
         {
@@ -3660,15 +3743,11 @@
       );
 
 
-    revealElements.forEach(
-      element => {
+    revealElements.forEach(element => {
 
-        revealObserver.observe(
-          element
-        );
+      revealObserver.observe(element);
 
-      }
-    );
+    });
 
 
     /* =======================================================
@@ -3676,48 +3755,33 @@
     ======================================================== */
 
     const bars =
-      document.querySelectorAll(
-        ".bar i"
-      );
+      document.querySelectorAll(".bar i");
 
 
     const barObserver =
       new IntersectionObserver(
         entries => {
 
-          entries.forEach(
-            entry => {
+          entries.forEach(entry => {
 
-              if (
-                entry.isIntersecting
-              ) {
+            if (entry.isIntersecting) {
 
-                const bar =
-                  entry.target;
+              const bar = entry.target;
+              const width = bar.dataset.width;
 
-                const width =
-                  bar.dataset.width;
+              requestAnimationFrame(() => {
 
-                requestAnimationFrame(
-                  () => {
+                bar.style.transition =
+                  "width 1.15s cubic-bezier(.2,.7,.2,1)";
 
-                    bar.style.transition =
-                      "width 1.15s cubic-bezier(.2,.7,.2,1)";
+                bar.style.width = width;
 
-                    bar.style.width =
-                      width;
+              });
 
-                  }
-                );
-
-                barObserver.unobserve(
-                  bar
-                );
-
-              }
-
+              barObserver.unobserve(bar);
             }
-          );
+
+          });
 
         },
         {
@@ -3726,15 +3790,11 @@
       );
 
 
-    bars.forEach(
-      bar => {
+    bars.forEach(bar => {
 
-        barObserver.observe(
-          bar
-        );
+      barObserver.observe(bar);
 
-      }
-    );
+    });
 
 
     /* =======================================================
@@ -3742,18 +3802,14 @@
     ======================================================== */
 
     const header =
-      document.querySelector(
-        "header"
-      );
+      document.querySelector("header");
 
 
     window.addEventListener(
       "scroll",
       () => {
 
-        if (
-          window.scrollY > 30
-        ) {
+        if (window.scrollY > 30) {
 
           header.style.background =
             "rgba(7,11,20,0.90)";
@@ -3762,10 +3818,10 @@
 
           header.style.background =
             "rgba(7,11,20,0.72)";
-
         }
 
-      }
+      },
+      { passive: true }
     );
 
   </script>
